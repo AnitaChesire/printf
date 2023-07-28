@@ -45,16 +45,6 @@ int _printf(const char *format, ...)
 				write(1, str, len);
 				char_print += (len - 1);
 			}
-			else if (*format == 'd')
-			{
-				int *upper = va_arg(args, int *);
-				int num = 0;
-				
-				while (upper[num] != '\0')
-				       num++;
-				write(1, upper, num);
-				char_print += (len - 1);
-			}
 		}
 		char_print++;
 		format++;
