@@ -45,6 +45,11 @@ int _printf(const char *format, ...)
 				write(1, str, len);
 				char_print += (len - 1);
 			}
+			else if (*format == 'd')
+				print_d(va_arg(args, int));
+
+			else if (*format == 'i')
+				print_i(va_arg(args, int));
 		}
 		char_print++;
 		format++;
