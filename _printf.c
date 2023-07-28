@@ -50,6 +50,8 @@ int _printf(const char *format, ...)
 
 			else if (*format == 'i')
 				print_i(va_arg(args, int));
+			else if (*format == 'p')
+				print_p(va_arg(args, void*));
 		}
 		char_print++;
 		format++;

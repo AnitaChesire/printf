@@ -10,5 +10,6 @@ int _printf(const char *format, ...);
 int put_char(int c);
 void print_d(int n);
 void print_i(int n);
+void print_p(const void *p);
 
 #endif
